@@ -89,25 +89,17 @@ class BST
     Node LCA(Node node, int n1, int n2) 
     {
         // Your code here
-        //int n1,n2;
         Node r=node;
         Node n=null;
         if(node==null){
             return node;
         }
         while(node!=null){
-            /*if(node.data>=n1 && node.data<=n2){
-                n=node;
-                //return n;
-                break;
-            }*/
             if(node.data>n1 && node.data>n2){
-                node=node.left;;
-                //return n
+                node=node.left;
             }
             else if(node.data<n1 && node.data<n2){
                 node=node.right;
-                //return
             }
             else{
                 break;
